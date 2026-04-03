@@ -1,121 +1,162 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtMatique - Tech & Tutos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArtMatique</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: white;
-        }
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #111a2e;
+      --primary: #38bdf8;
+      --text: #e5e7eb;
+    }
 
-        header {
-            background: #1e293b;
-            padding: 20px;
-            text-align: center;
-        }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-            color: #38bdf8;
-        }
+    /* HEADER */
+    header {
+      padding: 50px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #0b1220, #111a2e);
+    }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            background: #111827;
-            padding: 10px;
-        }
+    header h1 {
+      font-size: 42px;
+      margin: 0;
+      color: var(--primary);
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-        }
+    header p {
+      margin-top: 10px;
+      opacity: 0.8;
+    }
 
-        nav a:hover {
-            color: #38bdf8;
-        }
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px;
+      background: #0f172a;
+      border-top: 1px solid #1e293b;
+      border-bottom: 1px solid #1e293b;
+    }
 
-        .container {
-            padding: 40px;
-            text-align: center;
-        }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        .btn {
-            background: #38bdf8;
-            padding: 10px 20px;
-            border: none;
-            color: black;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+    nav a:hover {
+      color: var(--primary);
+    }
 
-        .btn:hover {
-            background: #0ea5e9;
-        }
+    /* CONTAINER */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
 
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            margin: 20px auto;
-            width: 80%;
-            border-radius: 10px;
-        }
+    .card {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 12px;
+      transition: 0.3s;
+      border: 1px solid #1e293b;
+    }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #111827;
-            margin-top: 40px;
-        }
-    </style>
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+    }
+
+    .card h2 {
+      color: var(--primary);
+    }
+
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: var(--primary);
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .btn:hover {
+      background: #0ea5e9;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      background: #0f172a;
+      border-top: 1px solid #1e293b;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-    <h1>🔥 ArtMatique</h1>
-    <p>Tutoriels PC • Smartphones • Arduino • ESP32 • STM32</p>
+  <h1>ArtMatique 🔥</h1>
+  <p>Tutoriels PC • Smartphones • Arduino • ESP32 • STM32</p>
 </header>
 
 <nav>
-    <a href="#">Accueil</a>
-    <a href="#">Tutoriels</a>
-    <a href="#">Téléchargements</a>
-    <a href="#">YouTube</a>
+  <a href="#">Accueil</a>
+  <a href="#">Tutoriels</a>
+  <a href="#">Téléchargements</a>
+  <a href="#">Contact</a>
 </nav>
 
 <div class="container">
 
-    <div class="card">
-        <h2>Bienvenue 👋</h2>
-        <p>Bienvenue sur ArtMatique, ton site de tutoriels tech et informatique.</p>
-        <button class="btn">Voir les tutoriels</button>
-    </div>
+  <div class="card">
+    <h2>🚀 Bienvenue</h2>
+    <p>Apprends la technologie simplement avec des tutoriels pratiques.</p>
+    <a class="btn" href="#">Commencer</a>
+  </div>
 
-    <div class="card">
-        <h2>📥 Téléchargements</h2>
-        <p>Retrouve ici tous les fichiers et projets gratuits.</p>
-        <button class="btn">Accéder</button>
-    </div>
+  <div class="card">
+    <h2>💻 PC & Smartphones</h2>
+    <p>Dépannage, astuces et optimisation système.</p>
+    <a class="btn" href="#">Voir</a>
+  </div>
 
-    <div class="card">
-        <h2>🎥 Chaîne YouTube</h2>
-        <p>Abonne-toi pour suivre les tutoriels en vidéo.</p>
-        <button class="btn">Voir YouTube</button>
-    </div>
+  <div class="card">
+    <h2>⚡ Arduino / ESP32</h2>
+    <p>Projets IoT et programmation embarquée.</p>
+    <a class="btn" href="#">Explorer</a>
+  </div>
+
+  <div class="card">
+    <h2>📥 Téléchargements</h2>
+    <p>Codes sources, fichiers et projets gratuits.</p>
+    <a class="btn" href="#">Accéder</a>
+  </div>
 
 </div>
 
 <footer>
-    © 2026 ArtMatique - Tous droits réservés
+  © 2026 ArtMatique - Tous droits réservés
 </footer>
 
 </body>
