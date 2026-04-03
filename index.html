@@ -1,161 +1,229 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtMatique | Tech, DIY & Ressources</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --dark-bg: #0f172a;
-            --card-bg: #1e293b;
-            --accent: #38bdf8; /* Bleu Tech */
-            --highlight: #f472b6; /* Rose Gaming/Art */
-            --text-main: #f1f5f9;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ArtMatique | Tech, DIY & Ressources</title>
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-main);
-            margin: 0;
-            line-height: 1.6;
-        }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-        header {
-            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
-                        url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000');
-            background-size: cover;
-            background-position: center;
-            padding: 80px 20px;
-            text-align: center;
-            border-bottom: 3px solid var(--accent);
-        }
+<style>
+:root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --accent: #38bdf8;
+    --accent2: #f472b6;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+}
 
-        .hero-title { font-size: 3rem; margin: 0; letter-spacing: 2px; }
-        .hero-tagline { color: var(--accent); font-weight: bold; font-size: 1.2rem; }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
 
-        nav {
-            background: var(--card-bg);
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
+/* HEADER */
+header {
+    background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
+    url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200');
+    background-size: cover;
+    background-position: center;
+    padding: 90px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--accent);
+}
 
-        nav a { text-decoration: none; color: white; font-weight: 600; transition: 0.3s; }
-        nav a:hover { color: var(--accent); }
+header h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    letter-spacing: 3px;
+}
 
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+header p {
+    color: var(--accent);
+    font-weight: bold;
+}
 
-        /* Grille de contenu */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
+/* NAV */
+nav {
+    position: sticky;
+    top: 0;
+    background: var(--card);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 100;
+}
 
-        .card {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 20px;
-            border: 1px solid #334155;
-            transition: 0.3s ease;
-        }
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-        .card:hover { border-color: var(--accent); transform: translateY(-5px); }
+nav a:hover {
+    color: var(--accent);
+}
 
-        .badge {
-            background: var(--accent);
-            color: var(--dark-bg);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 800;
-            text-transform: uppercase;
-        }
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-        /* Section Téléchargements */
-        .dl-box {
-            background: #0f172a;
-            border-left: 4px solid var(--highlight);
-            padding: 15px;
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
 
-        .btn-dl {
-            background: var(--highlight);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
+/* CARD */
+.card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #334155;
+    transition: 0.3s;
+}
 
-        footer { text-align: center; padding: 40px; color: #64748b; border-top: 1px solid #334155; }
-    </style>
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+}
+
+.badge {
+    background: var(--accent);
+    color: black;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* DOWNLOAD BOX */
+.dl-box {
+    margin-top: 15px;
+    padding: 12px;
+    background: #0b1220;
+    border-left: 4px solid var(--accent2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    background: var(--accent2);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* TITRES SECTION */
+h2 {
+    margin-top: 60px;
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: var(--muted);
+    border-top: 1px solid #334155;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1 class="hero-title">ARTMATIQUE</h1>
-    <p class="hero-tagline">Technologie • Informatique • DIY</p>
+    <h1>ARTMATIQUE</h1>
+    <p>Technologie • Informatique • DIY • IA</p>
 </header>
 
 <nav>
     <a href="#tutos"><i class="fas fa-laptop-code"></i> Tutos</a>
     <a href="#diy"><i class="fas fa-tools"></i> DIY</a>
-    <a href="#gaming"><i class="fas fa-gamepad"></i> Hardware</a>
+    <a href="#hardware"><i class="fas fa-microchip"></i> Hardware</a>
     <a href="#files"><i class="fas fa-download"></i> Fichiers</a>
 </nav>
 
 <div class="container">
-    
-    <h2 id="tutos"><i class="fas fa-star"></i> Tutoriels & Logiciels</h2>
-    <div class="grid">
-        <div class="card">
-            <span class="badge">Setup PC</span>
-            <h3>Optimisation Windows 11</h3>
-            <p>Mon script personnalisé pour supprimer les bloatwares et accélérer le démarrage.</p>
-            <div class="dl-box">
-                <span>Script_Opti_v1.zip</span>
-                <a href="#" class="btn-dl">Télécharger</a>
-            </div>
-        </div>
 
-        <div class="card">
-            <span class="badge">Modélisation 3D</span>
-            <h3>Assets 3D DIY</h3>
-            <p>Retrouvez les fichiers STL pour mes derniers projets de customisation de gadgets.</p>
-            <div class="dl-box">
-                <span>Case_Pi5.stl</span>
-                <a href="#" class="btn-dl">Télécharger</a>
-            </div>
+<!-- TUTORIELS -->
+<h2 id="tutos">🔥 Tutoriels & Logiciels</h2>
+<div class="grid">
+
+    <div class="card">
+        <span class="badge">Windows</span>
+        <h3>Optimisation PC Pro</h3>
+        <p>Améliore la vitesse de ton PC avec mes réglages avancés.</p>
+        <div class="dl-box">
+            <span>script-opti.zip</span>
+            <a href="#" class="btn">Télécharger</a>
         </div>
     </div>
 
-    <h2 id="files" style="margin-top: 60px;"><i class="fas fa-folder-open"></i> Toutes les ressources</h2>
     <div class="card">
-        <p>Retrouvez ici tous les liens mentionnés dans mes vidéos (Setup, Guides, Configs).</p>
-        <ul>
-            <li>Configuration OBS pour le Streaming (PDF) - <a href="#" style="color: var(--accent);">Lien</a></li>
-            <li>Pack de Textures Art Génératif - <a href="#" style="color: var(--accent);">Lien</a></li>
-            <li>Guide Hardware 2026 - <a href="#" style="color: var(--accent);">Lien</a></li>
-        </ul>
+        <span class="badge">Arduino</span>
+        <h3>Projet IoT ESP32</h3>
+        <p>Contrôle des LEDs via WiFi entre deux ESP32.</p>
+        <div class="dl-box">
+            <span>esp32_project.zip</span>
+            <a href="#" class="btn">Télécharger</a>
+        </div>
     </div>
 
 </div>
 
+<!-- DIY -->
+<h2 id="diy">🛠️ DIY & Projets</h2>
+<div class="grid">
+
+    <div class="card">
+        <span class="badge">3D Print</span>
+        <h3>Boîtier Arduino</h3>
+        <p>Fichiers STL pour imprimer un boîtier propre.</p>
+        <div class="dl-box">
+            <span>case.stl</span>
+            <a href="#" class="btn">Télécharger</a>
+        </div>
+    </div>
+
+</div>
+
+<!-- FILES -->
+<h2 id="files">📂 Ressources</h2>
+
+<div class="card">
+    <p>Tous les fichiers utilisés dans mes vidéos sont ici.</p>
+    <ul>
+        <li>Guide STM32 débutant - <a href="#" style="color:var(--accent)">Lien</a></li>
+        <li>Pack Arduino complet - <a href="#" style="color:var(--accent)">Lien</a></li>
+        <li>Scripts Python IA - <a href="#" style="color:var(--accent)">Lien</a></li>
+    </ul>
+</div>
+
+</div>
+
 <footer>
-    <p>ArtMatique &copy; 2026 | Créé avec passion pour la communauté Tech.</p>
+    © 2026 ArtMatique — Créé pour apprendre la tech simplement
 </footer>
 
 </body>
