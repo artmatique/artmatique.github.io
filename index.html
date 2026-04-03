@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtMatique Pro | Accueil</title>
+    <title>ArtMatique Pro | Tech, DIY & Software Hub</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css"> </head>
+    
+</head>
 <body>
 
 <header>
-    <div class="logo">
-        <img src="assets/logo.png" alt="Logo" class="logo-img"> ArtMatique<span>.pro</span>
-    </div>
+    <div class="logo">ArtMatique</div>
     <nav>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="tutos.html">Tutos</a></li>
-            <li><a href="downloads.html">Téléchargements</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#tutos">Tutos</a></li>
+            <li><a href="#downloads">Téléchargements</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <div class="nav-tools">
@@ -27,9 +26,93 @@
             <i class="fas fa-search"></i>
             <input type="text" placeholder="Rechercher...">
         </div>
-        <a href="login.html" class="btn-login" style="text-decoration:none">Connexion</a>
+        <button class="btn-login">Connexion</button>
     </div>
 </header>
 
-<script src="js/main.js"></script> </body>
+<section class="hero">
+    <p style="color: var(--secondary); font-weight: 700; text-transform: uppercase;">Innovation & DIY</p>
+    <h1>L'Univers ArtMatique</h1>
+    <p>Explorez nos tutoriels informatiques, optimisez votre setup et téléchargez nos outils exclusifs.</p>
+</section>
+
+<div class="container">
+    
+    <h2 class="section-title" id="tutos"><i class="fas fa-laptop-code"></i> Derniers Tutoriels</h2>
+    <div class="grid">
+        <div class="card">
+            <i class="fas fa-rocket"></i>
+            <h3>Optimisation Windows</h3>
+            <p>Boostez votre système pour le gaming et le montage vidéo en quelques clics.</p>
+            <a href="#" style="color:var(--primary); text-decoration:none; margin-top:15px; display:block; font-weight:600;">Lire le guide →</a>
+        </div>
+        <div class="card">
+            <i class="fas fa-microchip"></i>
+            <h3>Hardware & DIY</h3>
+            <p>Tests de composants et guides de montage pour des configurations sur-mesure.</p>
+            <a href="#" style="color:var(--primary); text-decoration:none; margin-top:15px; display:block; font-weight:600;">Lire le guide →</a>
+        </div>
+        <div class="card">
+            <i class="fas fa-brain"></i>
+            <h3>Intelligence Artificielle</h3>
+            <p>Comment intégrer l'IA dans vos projets quotidiens et automatiser vos tâches.</p>
+            <a href="#" style="color:var(--primary); text-decoration:none; margin-top:15px; display:block; font-weight:600;">Lire le guide →</a>
+        </div>
+    </div>
+
+    <h2 class="section-title" id="downloads" style="margin-top: 80px;"><i class="fas fa-download"></i> Ressources & Softwares</h2>
+    <div class="download-container">
+        <div class="dl-item">
+            <div>
+                <strong>ArtMatique_Toolbox_v2.zip</strong><br>
+                <small>Scripts d'optimisation système | 5.2 MB</small>
+            </div>
+            <a href="#" class="btn-action">Télécharger</a>
+        </div>
+        <div class="dl-item">
+            <div>
+                <strong>Pack_Assets_3D_DIY.rar</strong><br>
+                <small>Modèles STL pour impression 3D | 12 MB</small>
+            </div>
+            <a href="#" class="btn-action">Télécharger</a>
+        </div>
+        <div class="dl-item">
+            <div>
+                <strong>Guide_Setup_Streamer.pdf</strong><br>
+                <small>Configuration complète OBS & Audio | 1.5 MB</small>
+            </div>
+            <a href="#" class="btn-action">Télécharger</a>
+        </div>
+    </div>
+
+</div>
+
+<section class="social-section" id="contact">
+    <h2>NOUS SUIVRE</h2>
+    <p>Rejoignez les passionnés de tech sur nos différents réseaux</p>
+    <div class="social-links">
+        <a href="#" class="social-icon tiktok">
+            <i class="fab fa-tiktok"></i>
+            <span>TikTok</span>
+        </a>
+        <a href="#" class="social-icon youtube">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+        </a>
+        <a href="#" class="social-icon facebook">
+            <i class="fab fa-facebook-f"></i>
+            <span>Facebook</span>
+        </a>
+        <a href="#" class="social-icon instagram">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+    </div>
+</section>
+
+<footer>
+    <p>ArtMatique &copy; 2026 | Portfolio Professionnel | Propulsé par GitHub Pages</p>
+</footer>
+
+</body>
 </html>
