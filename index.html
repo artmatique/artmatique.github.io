@@ -3,170 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Professionnel | Ingénierie & Recherche</title>
+    <title>Tutos Info & Ressources | Download Center</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --accent-color: #3498db;
-            --text-color: #333;
-            --bg-light: #f4f7f6;
+            --primary: #1a1a2e;
+            --accent: #00d2ff;
+            --success: #27ae60;
+            --bg: #f8f9fa;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Segoe UI', system-ui, sans-serif;
             margin: 0;
-            color: var(--text-color);
-            background-color: var(--bg-light);
+            background: var(--bg);
+            color: #333;
         }
 
-        header {
-            background: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
+        /* Navigation */
         nav {
-            background: white;
+            background: var(--primary);
             padding: 1rem;
             position: sticky;
             top: 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
         }
 
         nav a {
+            color: white;
             text-decoration: none;
-            color: var(--primary-color);
-            font-weight: bold;
-            transition: 0.3s;
+            font-weight: 500;
+            font-size: 1.1rem;
         }
 
-        nav a:hover {
-            color: var(--accent-color);
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 2rem auto;
             padding: 0 1rem;
         }
 
-        section {
-            background: white;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        h2 {
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 10px;
-            color: var(--primary-color);
-        }
-
-        .project-grid {
+        /* Grille des Tutoriels */
+        .tuto-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
 
-        .project-card {
-            border: 1px solid #ddd;
-            padding: 1rem;
-            border-radius: 5px;
-            transition: transform 0.2s;
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
         }
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-color);
+        .card:hover { transform: translateY(-5px); }
+
+        .card-content { padding: 1.5rem; }
+
+        .category-tag {
+            background: var(--accent);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
         }
 
-        .tag {
-            display: inline-block;
-            background: #e1ecf4;
-            color: #39739d;
-            padding: 2px 8px;
-            border-radius: 3px;
-            font-size: 0.85rem;
-            margin-right: 5px;
+        /* Boutons de téléchargement */
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--success);
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background 0.3s;
         }
 
-        footer {
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-            color: #777;
+        .btn-download:hover { background: #219150; }
+
+        /* Section Téléchargements */
+        .download-list {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
         }
+
+        .download-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .download-item:last-child { border: 0; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Prénom Nom</h1>
-    <p>Étudiant Ingénieur en Génie Électrique | Spécialiste IA & Énergies</p>
-</header>
-
 <nav>
-    <a href="#about">À propos</a>
-    <a href="#projects">Projets</a>
-    <a href="#skills">Compétences</a>
+    <a href="#tutos">Tutoriels</a>
+    <a href="#downloads">Logiciels & Scripts</a>
     <a href="#contact">Contact</a>
 </nav>
 
+<section class="hero">
+    <h1>Centre de Ressources Informatiques</h1>
+    <p>Guides techniques, scripts automatisés et téléchargements directs.</p>
+</section>
+
 <div class="container">
     
-    <section id="about">
-        <h2>À propos</h2>
-        <p>
-            Actuellement en 6ème année d'études d'ingénieur, je me passionne pour l'intersection entre le génie électrique et l'intelligence artificielle. Mes travaux portent notamment sur le monitoring intelligent et la prédiction de défauts dans les systèmes énergétiques.
-        </p>
-    </section>
+    <h2 id="tutos"><i class="fas fa-book-open"></i> Derniers Tutoriels</h2>
+    <div class="tuto-grid">
+        <article class="card">
+            <div class="card-content">
+                <span class="category-tag">Système</span>
+                <h3>Optimisation Windows 11</h3>
+                <p>Découvrez comment désactiver les services inutiles pour booster vos performances en ingénierie.</p>
+                <a href="#" style="color: var(--accent);">Lire la suite →</a>
+            </div>
+        </article>
 
-    <section id="projects">
-        <h2>Projets Phares</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Détection de Défauts Photovoltaïques</h3>
-                <p>Développement d'un système basé sur des réseaux de neurones bimodaux pour l'analyse d'images thermiques par drone.</p>
-                <span class="tag">MATLAB</span> <span class="tag">Deep Learning</span> <span class="tag">Solar</span>
+        <article class="card">
+            <div class="card-content">
+                <span class="category-tag">Programmation</span>
+                <h3>Introduction à Python</h3>
+                <p>Apprenez les bases de Python pour l'automatisation de tâches répétitives.</p>
+                <a href="#" style="color: var(--accent);">Lire la suite →</a>
             </div>
-            <div class="project-card">
-                <h3>Application Python / Tkinter</h3>
-                <p>Interface graphique pour la génération de rapports automatiques de maintenance électrique.</p>
-                <span class="tag">Python</span> <span class="tag">Automation</span>
+        </article>
+    </div>
+
+    <h2 id="downloads" style="margin-top: 4rem;"><i class="fas fa-download"></i> Espace Téléchargement</h2>
+    <div class="download-list">
+        <div class="download-item">
+            <div>
+                <strong>Script de Backup Automatique</strong><br>
+                <small>Format: .py | Taille: 15 KB</small>
             </div>
+            <a href="VOTRE_LIEN_ICI" class="btn-download">
+                <i class="fas fa-file-download"></i> Télécharger
+            </a>
         </div>
-    </section>
 
-    <section id="skills">
-        <h2>Expertise Technique</h2>
-        <ul>
-            <li><strong>Systèmes de puissance :</strong> Transformateurs, Machines électriques, MPPT.</li>
-            <li><strong>Programmation :</strong> Python, MATLAB, VHDL, C++ (Arduino).</li>
-            <li><strong>IA :</strong> CNN, LSTM, MobileNetV2.</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Intéressé par une collaboration ou un échange technique ?</p>
-        <p>
-            <i class="fas fa-envelope"></i> mon.email@exemple.com<br>
-            <i class="fab fa-linkedin"></i> linkedin.com/in/votreprofil
-        </p>
-    </section>
+        <div class="download-item">
+            <div>
+                <strong>Template Rapport Technique PDF</strong><br>
+                <small>Format: .docx | Taille: 1.2 MB</small>
+            </div>
+            <a href="VOTRE_LIEN_ICI" class="btn-download">
+                <i class="fas fa-file-download"></i> Télécharger
+            </a>
+        </div>
+    </div>
 
 </div>
 
 <footer>
-    &copy; 2026 - Portfolio Professionnel - Généré via GitHub Pages
+    <center><p>&copy; 2026 | Propulsé par GitHub Pages</p></center>
 </footer>
 
 </body>
