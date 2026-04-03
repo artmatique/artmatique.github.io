@@ -1,5 +1,4 @@
-
- :root {
+        :root {
             --primary: #6366f1; 
             --secondary: #a855f7; 
             --dark: #0f172a;
@@ -183,7 +182,6 @@
             .hero h1 { font-size: 2.5rem; }
             .search-box { width: 100%; }
         }
-
 /* Ajout pour le logo dans css/style.css */
 .logo-img {
     height: 40px; /* Ajuste selon ton logo */
