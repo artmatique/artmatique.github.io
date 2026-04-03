@@ -3,182 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutos Info & Ressources | Download Center</title>
+    <title>ArtMatique | Tech, DIY & Ressources</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary: #1a1a2e;
-            --accent: #00d2ff;
-            --success: #27ae60;
-            --bg: #f8f9fa;
+            --dark-bg: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8; /* Bleu Tech */
+            --highlight: #f472b6; /* Rose Gaming/Art */
+            --text-main: #f1f5f9;
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
             margin: 0;
-            background: var(--bg);
-            color: #333;
+            line-height: 1.6;
         }
 
-        /* Navigation */
+        header {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                        url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--accent);
+        }
+
+        .hero-title { font-size: 3rem; margin: 0; letter-spacing: 2px; }
+        .hero-tagline { color: var(--accent); font-weight: bold; font-size: 1.2rem; }
+
         nav {
-            background: var(--primary);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            background: var(--card-bg);
+            padding: 15px;
             display: flex;
             justify-content: center;
+            gap: 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        nav a { text-decoration: none; color: white; font-weight: 600; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+
+        /* Grille de contenu */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: white;
-            padding: 4rem 1rem;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        /* Grille des Tutoriels */
-        .tuto-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
         .card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: 0.3s;
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid #334155;
+            transition: 0.3s ease;
         }
 
-        .card:hover { transform: translateY(-5px); }
+        .card:hover { border-color: var(--accent); transform: translateY(-5px); }
 
-        .card-content { padding: 1.5rem; }
-
-        .category-tag {
+        .badge {
             background: var(--accent);
-            color: #fff;
-            padding: 4px 10px;
+            color: var(--dark-bg);
+            padding: 4px 12px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
+            font-weight: 800;
             text-transform: uppercase;
         }
 
-        /* Boutons de téléchargement */
-        .btn-download {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--success);
-            color: white;
-            padding: 12px 20px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            margin-top: 15px;
-            transition: background 0.3s;
-        }
-
-        .btn-download:hover { background: #219150; }
-
         /* Section Téléchargements */
-        .download-list {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .download-item {
+        .dl-box {
+            background: #0f172a;
+            border-left: 4px solid var(--highlight);
+            padding: 15px;
+            margin-top: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
-            border-bottom: 1px solid #eee;
         }
 
-        .download-item:last-child { border: 0; }
+        .btn-dl {
+            background: var(--highlight);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        footer { text-align: center; padding: 40px; color: #64748b; border-top: 1px solid #334155; }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="#tutos">Tutoriels</a>
-    <a href="#downloads">Logiciels & Scripts</a>
-    <a href="#contact">Contact</a>
-</nav>
+<header>
+    <h1 class="hero-title">ARTMATIQUE</h1>
+    <p class="hero-tagline">Technologie • Informatique • DIY</p>
+</header>
 
-<section class="hero">
-    <h1>Centre de Ressources Informatiques</h1>
-    <p>Guides techniques, scripts automatisés et téléchargements directs.</p>
-</section>
+<nav>
+    <a href="#tutos"><i class="fas fa-laptop-code"></i> Tutos</a>
+    <a href="#diy"><i class="fas fa-tools"></i> DIY</a>
+    <a href="#gaming"><i class="fas fa-gamepad"></i> Hardware</a>
+    <a href="#files"><i class="fas fa-download"></i> Fichiers</a>
+</nav>
 
 <div class="container">
     
-    <h2 id="tutos"><i class="fas fa-book-open"></i> Derniers Tutoriels</h2>
-    <div class="tuto-grid">
-        <article class="card">
-            <div class="card-content">
-                <span class="category-tag">Système</span>
-                <h3>Optimisation Windows 11</h3>
-                <p>Découvrez comment désactiver les services inutiles pour booster vos performances en ingénierie.</p>
-                <a href="#" style="color: var(--accent);">Lire la suite →</a>
+    <h2 id="tutos"><i class="fas fa-star"></i> Tutoriels & Logiciels</h2>
+    <div class="grid">
+        <div class="card">
+            <span class="badge">Setup PC</span>
+            <h3>Optimisation Windows 11</h3>
+            <p>Mon script personnalisé pour supprimer les bloatwares et accélérer le démarrage.</p>
+            <div class="dl-box">
+                <span>Script_Opti_v1.zip</span>
+                <a href="#" class="btn-dl">Télécharger</a>
             </div>
-        </article>
+        </div>
 
-        <article class="card">
-            <div class="card-content">
-                <span class="category-tag">Programmation</span>
-                <h3>Introduction à Python</h3>
-                <p>Apprenez les bases de Python pour l'automatisation de tâches répétitives.</p>
-                <a href="#" style="color: var(--accent);">Lire la suite →</a>
+        <div class="card">
+            <span class="badge">Modélisation 3D</span>
+            <h3>Assets 3D DIY</h3>
+            <p>Retrouvez les fichiers STL pour mes derniers projets de customisation de gadgets.</p>
+            <div class="dl-box">
+                <span>Case_Pi5.stl</span>
+                <a href="#" class="btn-dl">Télécharger</a>
             </div>
-        </article>
+        </div>
     </div>
 
-    <h2 id="downloads" style="margin-top: 4rem;"><i class="fas fa-download"></i> Espace Téléchargement</h2>
-    <div class="download-list">
-        <div class="download-item">
-            <div>
-                <strong>Script de Backup Automatique</strong><br>
-                <small>Format: .py | Taille: 15 KB</small>
-            </div>
-            <a href="VOTRE_LIEN_ICI" class="btn-download">
-                <i class="fas fa-file-download"></i> Télécharger
-            </a>
-        </div>
-
-        <div class="download-item">
-            <div>
-                <strong>Template Rapport Technique PDF</strong><br>
-                <small>Format: .docx | Taille: 1.2 MB</small>
-            </div>
-            <a href="VOTRE_LIEN_ICI" class="btn-download">
-                <i class="fas fa-file-download"></i> Télécharger
-            </a>
-        </div>
+    <h2 id="files" style="margin-top: 60px;"><i class="fas fa-folder-open"></i> Toutes les ressources</h2>
+    <div class="card">
+        <p>Retrouvez ici tous les liens mentionnés dans mes vidéos (Setup, Guides, Configs).</p>
+        <ul>
+            <li>Configuration OBS pour le Streaming (PDF) - <a href="#" style="color: var(--accent);">Lien</a></li>
+            <li>Pack de Textures Art Génératif - <a href="#" style="color: var(--accent);">Lien</a></li>
+            <li>Guide Hardware 2026 - <a href="#" style="color: var(--accent);">Lien</a></li>
+        </ul>
     </div>
 
 </div>
 
 <footer>
-    <center><p>&copy; 2026 | Propulsé par GitHub Pages</p></center>
+    <p>ArtMatique &copy; 2026 | Créé avec passion pour la communauté Tech.</p>
 </footer>
 
 </body>
