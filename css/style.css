@@ -195,7 +195,7 @@
   gap: 5px;
 }
 /* Styles spécifiques pour l'affichage des vidéos */
-        .grid {
+       .grid {
             display: grid;
             grid-template-columns: 1fr; /* Force une seule colonne */
             gap: 40px; /* Espace entre les vidéos */
@@ -250,6 +250,3 @@
                 max-width: 100%;
             }
         }
-.social-icon i {
-  margin-bottom: 0;
-}
