@@ -295,39 +295,145 @@
     .card-content h3 { font-size: 1.4rem; }
 }
 
-/*bannière */
+/* ==========================================================================
+   BANNIÈRE HERO (Ajustements styles)
+   ========================================================================== */
 .hero {
-        /* Chemin vers votre image (vérifiez qu'il est correct depuis votre fichier CSS) */
-        background-image: url('assets/banierre.jpg');
-        
-        /* Ajustements pour que l'image s'adapte parfaitement */
-        background-size: cover;       /* L'image couvre toute la zone, sans déformation */
-        background-position: center;  /* L'image est centrée */
-        background-repeat: no-repeat; /* L'image ne se répète pas */
-        
-        /* Hauteur et padding pour donner de l'espace (adaptez selon vos besoins) */
-        min-height: 400px; /* Exemple de hauteur fixe */
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Centre le texte verticalement */
-        align-items: center; /* Centre le texte horizontalement */
+    background-image: linear-gradient(rgba(12, 17, 29, 0.4), rgba(12, 17, 29, 0.75)), url('../assets/banierre.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    background: rgba(12, 17, 29, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 35px 50px;
+    border-radius: 15px;
+    max-width: 800px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+    color: #ffffff;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    color: #e2e8f0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .hero { min-height: 350px; }
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+    .hero-content { padding: 20px; }
+}
+
+/* ==========================================================================
+   NOUVEAU FOOTER LOOK PRO
+   ========================================================================== */
+.main-footer {
+    background-color: #111622;
+    color: #94a3b8;
+    padding: 60px 0 20px 0;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 80px;
+    border-top: 3px solid #e74c3c; /* Rappel de la couleur d'accent d'ArtMatique */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.footer-brand h3 {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links h4, .footer-community h4 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #e74c3c;
+    padding-left: 5px;
+}
+
+.footer-community p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-community strong {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding: 20px 20px 0 20px;
+    border-top: 1px solid rgba(148, 163, 184, 0.1);
+    text-align: center;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
         text-align: center;
-        
-        /* Un fond sombre pour assurer la lisibilité du texte blanc (optionnel mais recommandé) */
-        background-color: #0c111d; 
     }
-
-    /* 2. Assurez-vous que le texte dans .hero est bien lisible (blanc) */
-    .hero h1 {
-        color: #ffffff;
-        font-size: 2.5rem; /* Augmentez la taille comme dans l'exemple */
-        margin-bottom: 10px;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Ajoute une ombre pour plus de contraste */
+    .footer-links ul li a:hover {
+        padding-left: 0;
     }
-
-    .hero p {
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 1.1rem;
-        max-width: 600px; /* Limite la largeur pour une meilleure lecture */
-        text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-    }
+}
