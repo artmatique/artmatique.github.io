@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <!-- IMPORTANT : Un titre ultra-précis pour Google -->
-    <title>Comment installer Windows 11 de A à Z avec Rufus | ArtMatique</title>
-    <meta name="description" content="Guide complet en Wolof pour installer Windows 11 proprement. Apprenez à créer une clé USB bootable avec Rufus et à configurer votre PC.">
-    <meta name="keywords" content="installer windows 11, rufus, clé usb bootable, tutoriel informatique, Sénégal">
+    <title>Comment activer Windows et office avec une clé d'activation | ArtMatique</title>
+    <meta name="description" content="Guide complet pour activer Windows et Office proprement. Apprenez à activer Windows et Office avec une clé d'activation.">
+    <meta name="keywords" content="activer windows 11,activer Office, clé d'activation, tutoriel informatique, Sénégal">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -30,37 +30,79 @@
 
 <div class="container" style="margin-top: 50px;">
     <!-- Titre du Tutoriel -->
-    <h1 style="color: #2c3e50; font-size: 2.2rem; margin-bottom: 10px;">Comment installer Windows 11 de A à Z</h1>
+    <h1 style="color: #2c3e50; font-size: 2.2rem; margin-bottom: 10px;">Comment activer windows et Office</h1>
     <p style="color: #7f8c8d; margin-bottom: 30px;">Mis à jour en 2026 • Par ArtMatique</p>
 
     <!-- La Vidéo en grand -->
-    <div class="video-tuto-unique" style="width: 100%; max-width: 800px; margin: 0 auto 40px auto;">
-        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-            <iframe src="https://www.youtube.com/embed/o1-mGCYhW0E" 
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-                    allowfullscreen></iframe>
-        </div>
-    </div>
+   <div class="grid">
+        <!-- TUTO 1: ACTIVATION WINDOWS -->
+        <article class="card">
+            <span class="tag">Système</span>
+            <div class="video-container">
+                <video width="100%" height="auto" controls>
+                    <source src="files/videos/ACTIVATION_WIN.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéos HTML5.
+                </video>
+            </div>
 
     <!-- Le Guide Écrit (Ce que Google va adorer lire) -->
     <div class="tuto-text-content" style="max-width: 800px; margin: 0 auto; line-height: 1.8; color: #333;">
-        <h2><i class="fas fa-list-ol" style="color:#e74c3c;"></i> Les étapes principales du tutoriel</h2>
-        
-        <p>Dans ce tutoriel en Wolof, nous détaillons la méthode officielle et sécurisée pour installer Windows 11 sur n'importe quel ordinateur compatible.</p>
-        
-        <h3>1. Préparation de la clé USB avec Rufus</h3>
-        <p>Pour commencer, vous aurez besoin d'une clé USB d'au mains 8 Go. Téléchargez le fichier ISO officiel de Windows 11 ainsi que le logiciel Rufus. Sélectionnez votre clé, chargez l'ISO et lancez la gravure en mode GPT.</p>
+       <h2><i class="fas fa-shield-alt" style="color:#e74c3c;"></i> Guide d'activation de Windows avec un script KMS</h2>
 
-        <h3>2. Démarrage (Boot) sur la clé</h3>
-        <p>Éteignez votre ordinateur, insérez la clé, puis tapotez la touche de votre menu de démarrage (souvent F12, F9 ou Échap selon la marque de votre PC) pour choisir de démarrer sur la clé USB.</p>
+<p>L'activation de Windows via un serveur KMS (Key Management Service) est une méthode courante utilisée pour valider les licences du système d'exploitation. Ce guide vous explique comment utiliser notre script d'activation de manière simple et rapide.</p>
 
+<h3>Pourquoi utiliser la méthode KMS ?</h3>
+<p>La technologie KMS est initialement conçue par Microsoft pour permettre aux entreprises d'activer de grands parcs d'ordinateurs locaux sans avoir à connecter chaque machine individuellement aux serveurs de Microsoft. L'utilisation d'un script automatisé permet de configurer cette clé de licence en volume directement sur votre système.</p>
+
+<h3>Étape 1 : Téléchargement du script d'activation</h3>
+<p>Pour commencer, récupérez notre script sécurisé <strong>win_activator.bat</strong> disponible en haut de cette page ou dans notre section <a href="downloads.html">Téléchargements</a>. Ce fichier contient les lignes de commande nécessaires pour communiquer avec le serveur de licence.</p>
+
+<h3>Étape 2 : Désactivation temporaire de l'antivirus (Si nécessaire)</h3>
+<p>Étant donné que le script modifie des paramètres système majeurs (les clés de registre de Windows), il arrive fréquemment que l'antivirus Windows Defender le bloque par mesure de sécurité (faux positif). Si c'est le cas, désactivez temporairement la "Protection en temps réel" dans les paramètres de sécurité de Windows avant de lancer le fichier.</p>
+
+<h3>Étape 3 : Exécution en mode Administrateur</h3>
+<p>Pour que les commandes de gestion des licences fonctionnent, le script doit impérativement disposer des privilèges maximaux sur votre PC :</p>
+<ul>
+    <li>Faites un <strong>clic droit</strong> sur le fichier <code>win_activator.bat</code>.</li>
+    <li>Sélectionnez l'option <strong>"Exécuter en tant qu'administrateur"</strong>.</li>
+    <li>Une fenêtre d'invite de commandes (noire) va s'ouvrir et exécuter les étapes automatiquement.</li>
+</ul>
+
+<h3>Étape 4 : Vérification de l'activation</h3>
+<p>Une fois le script terminé, vous pouvez vérifier que votre système est correctement activé :</p>
+<ul>
+    <li>Rendez-vous dans les <strong>Paramètres</strong> de votre ordinateur (raccourci clavier <code>Windows + I</code>).</li>
+    <li>Allez dans <strong>Système</strong> puis dans l'onglet <strong>Activation</strong>.</li>
+    <li>Le statut doit afficher : <em>"Windows est activé à l'aide du service d'activation de votre organisation"</em>.</li>
+</ul>
         <!-- Ajoutez autant de texte et de détails que vous le souhaitez ici -->
     </div>
 </div>
 
-<footer style="margin-top: 100px; text-align: center; padding: 20px; background: #111622; color: #94a3b8;">
-    <p>ArtMatique &copy; 2026 | Propulsé par GitHub Pages</p>
+<!-- Footer Nouveau et Plus Cool -->
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h3>ArtMatique</h3>
+            <p>Votre hub de ressources technologiques : optimisation, tutoriels détaillés, et utilitaires gratuits.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="tutos.html">Tutos</a></li>
+                <li><a href="downloads.html">Téléchargements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-community">
+            <h4>Communauté</h4>
+            <p>Retrouvez nos formats vidéo sous le nom de <strong>Diangando</strong> sur vos plateformes favorites.</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>ArtMatique &copy; 2026 | Portfolio Professionnel | Propulsé par GitHub Pages</p>
+    </div>
 </footer>
-
 </body>
 </html>
